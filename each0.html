@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Each Method</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Strawberry</li>
+        <li>Guava</li>
+        <li>Orange</li>
+        <li>Banana</li>
+
+
+    </ul>
+    <script>
+        $(document).ready(function () {
+            $("li").each(function (index, element) {
+                if ($(element).text() == "Orange") {
+                    return false;
+                }
+                alert($(element).text());
+            });
+            alert("Each Function Terminates...!");
+
+        });
+    </script>
+</body>
+
+</html>

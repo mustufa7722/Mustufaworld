@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add & Remove Classes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+    <style>
+      h1{
+          color: black;
+          background-color: white;
+      }
+    
+    </style>
+</head>
+<body>
+    <h1>This Is My First Heading</h1>
+
+
+    <input type="button" value="Add Classes" id="btn1">
+    <input type="button" value="Remove Classes" id="btn2">
+    <input type="button" value="Add or Remove Classes" id="btn3">
+    <script>
+    $(document).ready(function(){
+     $("#btn1").click(function(){
+         $("h1").addClass("container bg-primary border mt-3 p-5 text-center");
+     });
+     $("#btn2").click(function(){
+         $("h1").removeClass(" bg-primary text-center text-dark");
+     });
+     $("#btn3").click(function(){
+         $("h1").toggleClass("bg-success container-fluid");
+     });
+      
+       })
+    
+    
+    </script>
+</body>
+</html>

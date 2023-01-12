@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checked Selector</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <form>
+        <label><b>Hobbies</b></label>
+        <br>
+    <label>Swimming</label>
+    <input type="checkbox" value="Swimming" name="Hobbies">
+    <label>Singing</label>
+    <input type="checkbox" value="Singing" name="Hobbies">
+    <label>Writing</label>
+    <input type="checkbox" value="Writing" name="Hobbies">
+    <label>Reading</label>
+    <input type="checkbox" value="Reading" name="Hobbies">
+    <label>Driving</label>
+    <input type="checkbox" value="Driving" name="Hobbies">
+
+       <input type="button" value="submit" id="btn1">
+
+    </form>
+    <br><br>
+    <div id="div1">
+
+    </div>
+    <script>
+    $(document).ready(function(){
+     $("#btn1").click(function(){
+         var option=$("input[type='checkbox']:checked");
+         var a = option.length + "checkbox is checked" + "<br>";
+
+         if(option.length>0){
+             option.each(function(){
+                 a +=$(this).val() + "<br>";
+             })
+             $("#div1").html(a);
+
+         }
+         else{
+             $("#div1").html("No checkbox is checked..!");
+         }
+
+     });
+
+
+
+    });
+    
+    
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drop Down</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<style>
+#btn1{
+    color: white;
+    background-color: black;
+    width: 150px;
+
+
+}
+#btn1:active{
+    color: black;
+    background-color: white;
+}
+
+
+</style>
+<body>
+    <select id="list">
+        <option value="-1">Select Country</option>
+        <option value="India">India</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Afghanistan">Afghanistan</option>
+    </select>
+    <input  type="button"  value="submit" id="btn1">
+    <h1 id="head1"></h1>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#btn1").click(function () {
+                var item = $("#list").val();
+
+                if (item == -1) {
+                    alert("Please Select an Country..");
+                }
+                else {
+                    $("#head1").text("Your Selected Country is  " + item);
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>

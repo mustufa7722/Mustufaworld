@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1>My First Heading</h1>
+    <h2>My Second Heading</h2>
+    <h3>My Third Heading</h3>
+    <h5 id="head">My Forth Heading</h1>
+    <h6 id="head2">My Fifth Heading</h6>
+
+        <script>
+            $(document).ready(function () {
+                $("h1").mousedown(function () {
+                    $("h1").css({
+                        "color": "red",
+                        "font-family": "cooper",
+                        "font-size": "50px"
+
+                    });
+                });
+
+                $("h2").mouseup(function () {
+                    $("h2").css({
+                        "color": "red",
+                        "font-family": "cooper",
+                        "font-size": "50px"
+
+                    });
+                });
+
+                $("h3").mouseenter(function () {
+                    $("h3").css({
+                        "color": "red",
+                        "font-family": "cooper",
+                        "font-size": "50px"
+
+                    });
+                });
+
+                $("#head").mouseleave(function () {
+                    $("#head").css({
+                        "color": "red",
+                        "font-family": "cooper",
+                        "font-size": "50px"
+
+                    });
+                });
+
+                $("#head2").dblclick(function () {
+                    $("#head2").css({
+                        "color": "red",
+                        "font-family": "cooper",
+                        "font-size": "50px"
+
+                    });
+                });
+            });
+
+
+
+
+
+        </script>
+</body>
+
+</html>
